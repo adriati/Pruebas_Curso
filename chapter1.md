@@ -135,7 +135,7 @@ datos_ozono
 `@solution`
 ```{r}
 #Carga de datos
-datos_ozono <- read.table("ozono.txt", header = TRUE)
+datos_ozono <- read.table("x39t.txt", header = TRUE)
 
 #Imprimir por pantalla
 datos_ozono
