@@ -14,7 +14,6 @@ skills: 1
 ```
 
 # Hacemos la primera suma
-## Vamos a darle un formato menos feo al contexto
 
 `@instructions`
 Suma 3 + 5
@@ -57,7 +56,6 @@ xp: 100
 ```
 
 #Ejercicio con matrices
-##Seleccion de filas y columnas
 
 `@instructions`
 Crear uma matriz m, de dimensiones (3x4) y de valores del 1 al 12, ordenados por columnas
@@ -111,7 +109,7 @@ key: 3a886dddf1
 xp: 100
 ```
 
-#Carga de archivo 
+#Carga de archivo
 
 `@instructions`
 El archivo ozono.txt tiene cabecera
