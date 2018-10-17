@@ -1,6 +1,6 @@
 ---
-title: 'Template Chapter 1'
-description: 'This is a template chapter.'
+title: 'Pruebas fáciles'
+description: ""
 ---
 
 ## Primer Ejercicio Basico
@@ -44,4 +44,59 @@ library(MASS)
 ```{r}
 # Mensaje de acierto en el ejercicio.
 success_msg("Correcto.")
+```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+key: ea83e14b1a
+xp: 100
+```
+
+#Ejercicio con matrices
+##Seleccion de filas y columnas
+
+`@instructions`
+#Crear uma matriz m, de dimensiones (3x4) y de valores del 1 al 12, ordenados por columnas
+#Vector de 1:12 creado ya en entorno.
+
+`@hint`
+Comando para crear la matriz --> matrix
+Incluir en el comando matrix, los argumentos byrow y ncol
+
+`@pre_exercise_code`
+```{r}
+vector_doce <- 1:12
+```
+
+`@sample_code`
+```{r}
+#Aqui tienes el vector de valores
+vector_doce
+
+#Crea la matriz
+m <- 
+
+#Muestra la matriz por pantalla
+
+```
+
+`@solution`
+```{r}
+#Aqui tienes el vector de valores
+vector_doce
+
+#Crea la matriz
+m <- matrix(vector_doce, byrow = FALSE, ncol = 4)
+
+#Muestra la matriz por pantalla
+m
+```
+
+`@sct`
+```{r}
+success_msg("Equilicuá.")
 ```
