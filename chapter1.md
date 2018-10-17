@@ -48,7 +48,7 @@ success_msg("Correcto.")
 
 ---
 
-## Insert exercise title here
+## Ejercicio con matrices
 
 ```yaml
 type: NormalExercise
@@ -103,7 +103,7 @@ success_msg("Equilicuá.")
 
 ---
 
-## Insert exercise title here
+## Cargar de archivo
 
 ```yaml
 type: NormalExercise
