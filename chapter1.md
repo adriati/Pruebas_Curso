@@ -60,8 +60,8 @@ xp: 100
 ##Seleccion de filas y columnas
 
 `@instructions`
-#Crear uma matriz m, de dimensiones (3x4) y de valores del 1 al 12, ordenados por columnas
-#Vector de 1:12 creado ya en entorno.
+Crear uma matriz m, de dimensiones (3x4) y de valores del 1 al 12, ordenados por columnas
+Vector de 1:12 creado ya en entorno.
 
 `@hint`
 Comando para crear la matriz --> matrix
@@ -99,4 +99,42 @@ m
 `@sct`
 ```{r}
 success_msg("Equilicuá.")
+```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+key: 3a886dddf1
+xp: 100
+```
+
+
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+
+```
+
+`@sct`
+```{r}
+
 ```
