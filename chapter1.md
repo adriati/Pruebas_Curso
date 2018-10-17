@@ -111,13 +111,15 @@ key: 3a886dddf1
 xp: 100
 ```
 
-
+#Carga de archivo 
 
 `@instructions`
-
+El archivo ozono.txt tiene cabecera
+Cargar el archivo ozono.txt (Usar orden read.table)
+Imprimir primeras 5 filas por pantalla
 
 `@hint`
-
+Incluir header = TRUE en el comando read.table
 
 `@pre_exercise_code`
 ```{r}
@@ -126,15 +128,23 @@ xp: 100
 
 `@sample_code`
 ```{r}
+#Carga de datos
+datos_ozono <- 
 
+#Imprimir por pantalla
+datos_ozono
 ```
 
 `@solution`
 ```{r}
+#Carga de datos
+datos_ozono <- read.table("ozono.txt", header = TRUE)
 
+#Imprimir por pantalla
+datos_ozono
 ```
 
 `@sct`
 ```{r}
-
+success_msg("Vamoh Bien!")
 ```
