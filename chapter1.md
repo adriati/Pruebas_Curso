@@ -30,7 +30,6 @@ library(MASS)
 `@sample_code`
 ```{r}
 #Primera suma, suma 3 + 5
-
 ```
 
 `@solution`
