@@ -128,7 +128,7 @@ datos <-
 
 `@solution`
 ```{r}
-datos <- 4
+datos <- read.table("calcio.txt")
 ```
 
 `@sct`
