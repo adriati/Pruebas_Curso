@@ -100,23 +100,21 @@ success_msg("Equilicuá.")
 
 ---
 
-## Cargar de archivo
+## Insert exercise title here
 
 ```yaml
 type: NormalExercise
-key: 3a886dddf1
+key: 181e4525c6
 xp: 100
 ```
 
-#Carga de archivo
+Hola
 
 `@instructions`
-El archivo ozono.txt tiene cabecera
-Cargar el archivo ozono.txt (Usar orden read.table)
-Imprimir primeras 5 filas por pantalla
+Hola
 
 `@hint`
-Incluir header = TRUE en el comando read.table
+
 
 `@pre_exercise_code`
 ```{r}
@@ -125,23 +123,15 @@ Incluir header = TRUE en el comando read.table
 
 `@sample_code`
 ```{r}
-#Carga de datos
-datos_ozono <- 
-
-#Imprimir por pantalla
-datos_ozono
+datos <-
 ```
 
 `@solution`
 ```{r}
-#Carga de datos
-datos_ozono <- read.csv("x39t.csv", header = TRUE)
-
-#Imprimir por pantalla
-datos_ozono
+datos <- read.table("datasets/calcio.txt", header = TRUE)
 ```
 
 `@sct`
 ```{r}
-success_msg("Vamoh Bien!")
+datos
 ```
