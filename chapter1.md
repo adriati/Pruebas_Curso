@@ -228,3 +228,52 @@ table(datos$Severity, datos$Priority)
 ```{r}
 success_msg("Bien!!")
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+key: ddd7cba369
+xp: 100
+```
+
+#Otra matriz de confusion
+Esta vez vamos a ver si hay relación entre el estado de la reclamación y la Prioridad que se le ha dado
+
+Además, utilizar comando apply para calcular porcentaje de estatus de cada prioridad.
+
+`@instructions`
+Volver a ejecutar el comando table, con las variables que nos interesan
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
+```
+
+`@sample_code`
+```{r}
+#Los datos estan cargados aqui		
+datos
+
+#Imprimir tabla de confusion
+table()
+```
+
+`@solution`
+```{r}
+#Los datos estan cargados aqui		
+datos
+
+#Imprimir tabla de confusion
+table(datos$Priority, datos$Status)
+```
+
+`@sct`
+```{r}
+
+```
