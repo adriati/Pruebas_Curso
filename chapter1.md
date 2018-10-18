@@ -32,12 +32,18 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 
 `@sample_code`
 ```{r}
+#Los datos estan cargados aqui		
+datos
+
 #Imprime los primeros 10 datos
 
 ```
 
 `@solution`
 ```{r}
+#Los datos estan cargados aqui		
+datos
+
 #Imprime los primeros 10 datos
 datos [1:10 ,]
 ```
@@ -76,12 +82,18 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 
 `@sample_code`
 ```{r}
+#Los datos estan cargados aqui		
+datos
+
 #Dibujar el gráfico
 plot()
 ```
 
 `@solution`
 ```{r}
+#Los datos estan cargados aqui		
+datos
+
 #Dibujar el gráfico
 plot(datos$Severity)
 ```
@@ -101,17 +113,34 @@ key: 181e4525c6
 xp: 100
 ```
 
-Imprimir datos importados a ver si Funciona
+#Aplicación de un filtro
+
+Los datos corresponden a datos de reclamaciones del 2017 y 2018
+Queremos calcular el número de reclamaciones de 2017
+
+Vamos a quedarnos solo con las filas que queremos, y vamos a hacer una operacion sencilla sobre ellas (Contar nº de filas)
+Para ello creamos un filtro:
+
+filtro <- datos$Year == 17 
+Que dará como resultado TRUE donde las filas cumplan la condicion y FALSE donde no
+
+Creamos un dataset nuevo con los datos del 2017:
+datos_2017 <- datos[filtro,]
+
+Contamos el número de filas del nuevo dataset
+nrow(datos_2017)
 
 `@instructions`
-
+1º Crear filtro
+2ª Generar nuevo dataset a partir del antiguo
+3º Contar filas
 
 `@hint`
 
 
 `@pre_exercise_code`
 ```{r}
-datos <- read.table ("http://assets.datacamp.com/production/repositories/3807/datasets/712a58e1eb259483c37da46dffbff7ada9241bb3/calcio.txt", header = TRUE)
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 ```
 
 `@sample_code`
@@ -119,7 +148,14 @@ datos <- read.table ("http://assets.datacamp.com/production/repositories/3807/da
 #Los datos estan cargados aqui		
 datos 
 
-#Imprime 5 filas
+#Creamos el filtro
+filtro <- 
+
+#Generamos el dataset del 2017 a partir del anterior
+datos_2017 <- datos
+
+#Contamos filas
+nrow(datos_2017)
 ```
 
 `@solution`
@@ -127,13 +163,19 @@ datos
 #Los datos estan cargados aqui		
 datos 
 
-#Imprime 5 filas
-datos[1:5,]
+#Creamos el filtro
+filtro <- datos$Year == 17 
+
+#Generamos el dataset del 2017 a partir del anterior
+datos_2017 <- datos[filtro,]
+
+#Contamos filas
+nrow(datos_2017)
 ```
 
 `@sct`
 ```{r}
-success_msg("Por fin !!")
+success_msg("Bien!!")
 ```
 
 ---
