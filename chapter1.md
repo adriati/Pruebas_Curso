@@ -100,7 +100,7 @@ success_msg("Equilicuá.")
 
 ---
 
-## Insert exercise title here
+## Ejercicio de carga de datos
 
 ```yaml
 type: NormalExercise
@@ -108,10 +108,58 @@ key: 181e4525c6
 xp: 100
 ```
 
-Hola
+Imprimir datos importados a ver si Funciona
 
 `@instructions`
-Hola
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+datos <- read.table ("http://assets.datacamp.com/production/repositories/3807/datasets/712a58e1eb259483c37da46dffbff7ada9241bb3/calcio.txt", header = TRUE)
+```
+
+`@sample_code`
+```{r}
+#Los datos estan cargados aqui		
+datos 
+
+#Imprime 5 filas
+```
+
+`@solution`
+```{r}
+#Los datos estan cargados aqui		
+datos 
+
+#Imprime 5 filas
+datos[1:5,]
+```
+
+`@sct`
+```{r}
+success_msg("Por fin !!")
+```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise
+key: 40b3a65b04
+xp: 50
+```
+
+Tipo Test
+
+`@possible_answers`
+Mala
+Mala 
+{Buena}
+Mala
 
 `@hint`
 
@@ -121,17 +169,7 @@ Hola
 
 ```
 
-`@sample_code`
-```{r}
-datos <-
-```
-
-`@solution`
-```{r}
-datos <- read.table("datasets/calcio.txt")
-```
-
 `@sct`
 ```{r}
-datos
+success_msg("XD")
 ```
