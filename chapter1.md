@@ -13,29 +13,33 @@ xp: 100
 skills: 1
 ```
 
-# Hacemos la primera suma
+# Ver qué datos tenemos
+Los os datos pertenecen al sistema de reclamaciones de UDo
+
+Tenemos los datos cargados en la variable datos
+Queremos ver por pantalla las primeras 10 líneas para ver que variables tenemos, primera toma de contacto con los datos
 
 `@instructions`
-Suma 3 + 5
+Con "datos [1:10 ,]" imprimimos las primeras 10 columnas
 
 `@hint`
-No es tan complicado, escribe 3 + 5.
+datos [1:10 ,]
 
 `@pre_exercise_code`
 ```{r}
-# Cargando una libreria
-library(MASS)
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 ```
 
 `@sample_code`
 ```{r}
-#Primera suma, suma 3 + 5
+#Imprime los primeros 10 datos
+
 ```
 
 `@solution`
 ```{r}
-#Primera suma, suma 3 + 5
-3 + 5
+#Imprime los primeros 10 datos
+datos [1:10 ,]
 ```
 
 `@sct`
@@ -46,7 +50,7 @@ success_msg("Correcto.")
 
 ---
 
-## Ejercicio con matrices
+## Primer Gráfico
 
 ```yaml
 type: NormalExercise
@@ -54,48 +58,37 @@ key: ea83e14b1a
 xp: 100
 ```
 
-#Ejercicio con matrices
+#¿Como están distribuidas las reclamaciones según su severidad?
+Dibujar un histograma del nº de reclamaciones según su serveridad, usando el comando plot
+
 
 `@instructions`
-Crear uma matriz m, de dimensiones (3x4) y de valores del 1 al 12, ordenados por columnas
-Vector de 1:12 creado ya en entorno.
+Podemos construir un histograma con la orden y argumento, el nombre de la column a que queremos utilizar
+plot(datos$Severity)
 
 `@hint`
-Comando para crear la matriz --> matrix
-Incluir en el comando matrix, los argumentos byrow y ncol
+plot(datos$Severity)
 
 `@pre_exercise_code`
 ```{r}
-vector_doce <- 1:12
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 ```
 
 `@sample_code`
 ```{r}
-#Aqui tienes el vector de valores
-vector_doce
-
-#Crea la matriz
-m <- 
-
-#Muestra la matriz por pantalla
-
+#Dibujar el gráfico
+plot()
 ```
 
 `@solution`
 ```{r}
-#Aqui tienes el vector de valores
-vector_doce
-
-#Crea la matriz
-m <- matrix(vector_doce, byrow = FALSE, ncol = 4)
-
-#Muestra la matriz por pantalla
-m
+#Dibujar el gráfico
+plot(datos$Severity)
 ```
 
 `@sct`
 ```{r}
-success_msg("Equilicuá.")
+success_msg("Correcto.")
 ```
 
 ---
