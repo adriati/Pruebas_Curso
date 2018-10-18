@@ -105,7 +105,7 @@ success_msg("Correcto.")
 
 ---
 
-## Ejercicio de carga de datos
+## Primer filtro en R
 
 ```yaml
 type: NormalExercise
@@ -180,30 +180,51 @@ success_msg("Bien!!")
 
 ---
 
-## Tipo Test
+## Tablas de Confusión en R
 
 ```yaml
-type: MultipleChoiceExercise
-key: 40b3a65b04
-xp: 50
+type: NormalExercise
+key: 2f70b37bae
+xp: 100
 ```
 
-Tipo Test
+#Crear tablas de confusión en R
+##Motivación
+Muchas veces, cuando queremos comparar dos variables que son factores, es decir, son variables discretas finitas, es muy útil el uso de tablas de confusión, además, son muy fáciles de usar.
+##Ejemplo de uso
+Queremos ver si para nuestros datos, hay una relación entre la prioridad que se le da a cada reclamacion, con la severidad de la misma
 
-`@possible_answers`
-1. Mala
-2. [Buena]
-3. Mala
+`@instructions`
+El ejercicio es muy simple, simplemente hay que utilizar el comando table(variable1, variable2)
+Las variables tienen que ser discretas.
 
 `@hint`
-
+table(datos$Priority, datos$Severity)
 
 `@pre_exercise_code`
 ```{r}
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
+```
 
+`@sample_code`
+```{r}
+#Los datos estan cargados aqui		
+datos
+
+#Imprimir tabla de confusion
+table()
+```
+
+`@solution`
+```{r}
+#Los datos estan cargados aqui		
+datos 
+
+#Imprimir tabla de confusion
+table(datos$Severity, datos$Priority)
 ```
 
 `@sct`
 ```{r}
-success_msg("XD")
+success_msg("Bien!!")
 ```
