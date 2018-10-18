@@ -145,7 +145,7 @@ success_msg("Por fin !!")
 
 ---
 
-## Insert exercise title here
+## Tipo Test
 
 ```yaml
 type: MultipleChoiceExercise
