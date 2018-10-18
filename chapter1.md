@@ -156,10 +156,9 @@ xp: 50
 Tipo Test
 
 `@possible_answers`
-Mala
-Mala 
-{Buena}
-Mala
+1. Mala
+2. [Buena]
+3. Mala
 
 `@hint`
 
