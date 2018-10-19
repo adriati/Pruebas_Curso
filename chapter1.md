@@ -272,7 +272,7 @@ Nota, también se podría expandiendo la matriz replicandola, a una de dimension
 
 `@pre_exercise_code`
 ```{r}
-datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
+
 ```
 
 `@sample_code`
