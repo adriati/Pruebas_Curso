@@ -363,10 +363,11 @@ for (i in 1 : ncol(datos)){
 }
 
 #Aplicamos el filtro a el dataset
-datos_numericos <- datos[, filtro_columnas]
+datos_numericos <- datos[, ]
 
-#Ejecutamos el análisis de correlaciones
-cor(datos_numericos)
+#Ejecutamos el análisis de correlaciones, guardamos los resultados y los imprimimos
+correlaciones <- cor()
+correlaciones
 
 #Se puede ver que la mayoria de las variables no guardan ninguna dependencia lineal entre ellas. Solo la del año con la del número del ticket (no significatica, porque el numero de asignacion del ticket es incremental,)
 ```
@@ -384,14 +385,17 @@ for (i in 1 : ncol(datos)){
 #Aplicamos el filtro a el dataset
 datos_numericos <- datos[, filtro_columnas]
 
-#Ejecutamos el análisis de correlaciones
-cor(datos_numericos)
+#Ejecutamos el análisis de correlaciones, guardamos los resultados y los imprimimos
+correlaciones <- cor(datos_numericos)
+correlaciones
 
 #Se puede ver que la mayoria de las variables no guardan ninguna dependencia lineal entre ellas. Solo la del año con la del número del ticket (no significatica, porque el numero de asignacion del ticket es incremental,)
 ```
 
 `@sct`
 ```{r}
+ex() %>% check_object("datos_numericos") %>% check_equal("datos_numericos")
+ex() %>% check_object("correlaciones") %>% check_equal("correlaciones")
 success_msg("Bien!!")
 ```
 
