@@ -86,10 +86,11 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 `@sample_code`
 ```{r}
 #Los datos estan cargados aqui		
-datos
+#datos
 
 #Dibujar el gráfico
-plot()
+mi_grafico <- 
+mi_grafico
 ```
 
 `@solution`
@@ -97,14 +98,14 @@ plot()
 #Los datos estan cargados aqui		
 datos
 
-#Dibujar el gráfico
-plot(datos$Severity)
+#Guardar el gráfico en mi_grafico y dibujarlo
+mi_grafico <- plot(datos$Severity)
+mi_grafico
 ```
 
 `@sct`
 ```{r}
-ex() %>% check_code("plot(datos$Severity)")
-missing_msg("Algo has hecho mal")
+ex() %>% check_object("mi_grafico") %>% check_equal("mi_grafico")
 success_msg("Correcto.")
 ```
 
