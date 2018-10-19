@@ -137,9 +137,9 @@ Contamos el número de filas del nuevo dataset
 nrow(datos_2017)
 
 `@instructions`
-1º Crear filtro
-2ª Generar nuevo dataset a partir del antiguo
-3º Contar filas
+1. Crear filtro
+2. Generar nuevo dataset a partir del antiguo
+3. Contar filas
 
 `@hint`
 
@@ -256,16 +256,16 @@ Esta vez vamos a ver si hay relación entre el estado de la reclamación y la Pr
 Además, utilizar comando apply y bucle for para calcular porcentaje de estatus de cada prioridad.
 
 `@instructions`
-Volver a ejecutar el comando table, con las variables que nos interesan
+1. Volver a ejecutar el comando table, con las variables que nos interesan
 
-El bucle for tiene la misma estructura que en cualquier lenguaje de programacion
+2. El bucle for tiene la misma estructura que en cualquier lenguaje de programacion
 Lo que vamos a hacer es usar la funcion apply para sumar por filas la matriz de confusion y obtener el número total de consultas por cada prioridad.
 apply(tabla_confusion, 1 , sum). El uno significa que la operacion que queremos hacer es por filas.
 Nota, también se podría expandiendo la matriz replicandola, a una de dimension 4x5
 
-Utilizamos el bucle para dividir y calcular el porcentaje.
+3. Utilizamos el bucle para dividir y calcular el porcentaje.
 
-Imprimimos matriz resultante
+4. Imprimimos matriz resultante
 
 `@hint`
 
@@ -339,10 +339,12 @@ xp: 100
 Vamos a comprobar si las variables numéricas tienen una dependencia lineal mediante el calculo de sus correlaciones
 
 `@instructions`
-Lo primero es crear un dataset solo con variables numéricas, para ello aplicaremos un filtro a las columnas.
+1. Lo primero es crear un dataset solo con variables numéricas, para ello aplicaremos un filtro a las columnas.
 Para ello utilizaremos la funcion "is.numeric", lo malo es que no le podemos pasar una fila entera, porque devuelve FALSE (es un vector, no un número) y hay que recorrer el vector con un bucle.
-Una vez lo tengamos, utilizamos el comando cor(dataset_numerico), para obtener correlaciones de variables dos a dos
-Por ultimo, se sacarán unas pequeñas conclusiones.
+
+2. Una vez lo tengamos, utilizamos el comando cor(dataset_numerico), para obtener correlaciones de variables dos a dos
+
+3. Por ultimo, se sacarán unas pequeñas conclusiones.
 
 `@hint`
 
