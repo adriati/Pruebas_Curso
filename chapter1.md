@@ -278,7 +278,7 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 `@sample_code`
 ```{r}
 #Los datos estan cargados aqui		
-datos
+#datos
 
 #Imprimir tabla de confusion y la guardamos
 tabla_confusion <- table()
@@ -398,6 +398,80 @@ correlaciones
 ```{r}
 ex() %>% check_object("datos_numericos") %>% check_equal("datos_numericos")
 ex() %>% check_object("correlaciones") %>% check_equal("correlaciones")
+success_msg("Bien!!")
+```
+
+---
+
+## Multiples Gráficos con LayOut
+
+```yaml
+type: NormalExercise
+key: e497483a94
+xp: 100
+```
+
+#Ejemplo de como dibujar varios gráficos usando la herramienta LayOut()
+
+`@instructions`
+1. Dividimos la pantalla de gráficos en las porciones que necesitemos (Este caso 4) usando layout(matrix(1:4, ncol = 2, byrow= TRUE))
+2. Utilizamos bucle For para dibujar los gráficos según el orden en el que se asignan en layout
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+#Los datos estan cargados aqui		
+#datos
+
+#Imprimir tabla de confusion y la guardamos
+tabla_confusion <- table()
+
+#Uso de la funcion apply
+vector_totales <- apply(tabla_confusion, 1 , sum)
+
+#Bucler for
+tabla_porcentajes <- matrix(1:20, ncol = 5)
+for (i in 1: nrow(tabla_confusion)) {
+  tabla_porcentajes[i,] <- tabla_confusion[i, ] / vector_totales[i]
+}
+
+#Imprimimos la tabla
+```
+
+`@sample_code`
+```{r}
+#Los datos que necesitamos son los calculados en el ejercicio 5 y estan en "tabla_porcentajes"
+
+#Creamos el layout, lo guardamos en milayout y lo ejecutamos
+mi_layout <- layout()
+mi_layout
+
+#Bucle for para dibujar gráficos, cada uno de un color
+for (i in 1:nrow(tabla_porcentajes)) {
+  plot(tabla_porcentajes[i,], type = "l",  col = i, xlab = "Status")
+}
+
+```
+
+`@solution`
+```{r}
+#Los datos que necesitamos son los calculados en el ejercicio 5 y estan en "tabla_porcentajes"
+
+#Creamos el layout, lo guardamos en milayout y lo ejecutamos
+mi_layout <- layout(matrix(1:4, ncol = 2, byrow= TRUE))
+mi_layout
+
+#Bucle for para dibujar gráficos, cada uno de un color
+for (i in 1:nrow(tabla_porcentajes)) {
+  plot(tabla_porcentajes[i,], type = "l",  col = i, xlab = "Status")
+}
+```
+
+`@sct`
+```{r}
+ex() %>% check_object("mi_layout") %>% check_equal("mi_layout")
 success_msg("Bien!!")
 ```
 
