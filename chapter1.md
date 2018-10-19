@@ -391,8 +391,7 @@ key: b63a9931b6
 xp: 50
 ```
 
-#Calcular el numero de respuestas inmediatas (Response.time.s = 0)
-##Los datos, como siempre, estan en la variable "datos"
+Calcular el numero de respuestas inmediatas (Response.time.s = 0). Los datos, como siempre, estan en la variable "datos"
 
 `@possible_answers`
 1. 2498
@@ -412,3 +411,25 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 ```{r}
 success_msg("Bien!!")
 ```
+
+---
+
+## Ejercicio Test normal
+
+```yaml
+type: PureMultipleChoiceExercise
+key: 3d4706d93e
+xp: 50
+```
+
+¿Cual de las siguientes lineas nos da un diagrama de sectores de la distribucion del status según la prioridad? (Ejercicio 5)
+
+`@hint`
+pie
+
+`@possible_answers`
+[pie(tabla_porcentajes[1,])]
+plot(table_porcentajes[1, ], type = "sector")
+sector(tabla_porcentajes[1,])
+
+`@feedback`
