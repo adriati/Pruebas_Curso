@@ -45,8 +45,9 @@ primeros_10
 #Los datos estan cargados aqui		
 datos
 
-#Imprime los primeros 10 datos
-datos [1:10 ,]
+#Guarda los primeros 10 datos e imprimelos 
+primeros_10 <- 
+primeros_10
 ```
 
 `@sct`
