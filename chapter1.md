@@ -53,7 +53,7 @@ primeros_10
 `@sct`
 ```{r}
 # Mensaje de acierto en el ejercicio.
-ex() %>% check_object("primeros_10") %>% check_equal()
+ex() %>% check_object("primeros_10") %>% check_equal("primeros_10")
 success_msg("Correcto.")
 ```
 
@@ -103,6 +103,7 @@ plot(datos$Severity)
 
 `@sct`
 ```{r}
+ex() %>% check_code("plot(datos$Severity)")
 success_msg("Correcto.")
 ```
 
