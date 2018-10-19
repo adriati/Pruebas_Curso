@@ -33,10 +33,11 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 `@sample_code`
 ```{r}
 #Los datos estan cargados aqui		
-datos
+#datos
 
-#Imprime los primeros 10 datos
-
+#Guarda los primeros 10 datos e imprimelos 
+primeros_10 <- 
+primeros_10
 ```
 
 `@solution`
@@ -51,6 +52,7 @@ datos [1:10 ,]
 `@sct`
 ```{r}
 # Mensaje de acierto en el ejercicio.
+ex() %>% check_object("primeros_10") %>% check_equal()
 success_msg("Correcto.")
 ```
 
@@ -434,4 +436,3 @@ pie
 
 `@feedback`
 success_msg("Bien!!")
-fail_msg("Mal")
