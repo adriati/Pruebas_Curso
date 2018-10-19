@@ -489,7 +489,7 @@ xp: 100
 
 `@instructions`
 1. Calcular el número de trabajadores que hay en el dataset
-2. Utilizar tapply para dividir el dataser en grupos según su Responsable.User y calcular la longitud de cada grupo
+2. Utilizar tapply para dividir el dataser en grupos según su Responsable.User y calcular la longitud de cada grupo. tapply(datos$Status, datos$Responsible.User, length)
 3. Ordenamos el vector resultante
 4. Cogemos los 5 resultados con mas llamadas y los dibujamos en un histograma
 
@@ -507,16 +507,16 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 num_trabajadores <- length(levels(datos$Responsible.User))
 
 #Utilizamos la funcion tapply para calcular el numero de reclamaciones que ha atendido cada trabajador
-llamadas_trabajador <- tapply(datos$Status, datos$Responsible.User, length)
+llamadas_trabajador <- tapply()
 
 #Ordenamos la lista resultado
-trabajadores_ord <- sort(llamadas_trabajador, decreasing = TRUE) 
+trabajadores_ord <- sort(, decreasing = TRUE) 
 
-#Seleccionamos los 5 primeros
-maximos_5 <- trabajadores_ord[1:5]
+#Seleccionamos los 3 primeros
+maximos_5 <- trabajadores_ord[]
 
 #Hacemos un plot
-plot(maximos_5)
+barplot(maximos_5)
 ```
 
 `@solution`
@@ -531,15 +531,19 @@ llamadas_trabajador <- tapply(datos$Status, datos$Responsible.User, length)
 trabajadores_ord <- sort(llamadas_trabajador, decreasing = TRUE) 
 
 #Seleccionamos los 5 primeros
-maximos_5 <- trabajadores_ord[1:5]
+maximos_5 <- trabajadores_ord[1:3]
 
 #Hacemos un plot
-plot(maximos_5)
+barplot(maximos_5)
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% check_object("num_trabajadores") %>% check_equal("num_trabajadores")
+ex() %>% check_object("llamadas_trabajador") %>% check_equal("llamadas_trabajador")
+ex() %>% check_object("trabajadores_ord") %>% check_equal("trabajadores_ord")
+ex() %>% check_object("maximos_5") %>% check_equal("maximos_5")
+success_msg("Bien!!")
 ```
 
 ---
