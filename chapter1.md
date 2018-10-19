@@ -513,10 +513,10 @@ llamadas_trabajador <- tapply()
 trabajadores_ord <- sort(, decreasing = TRUE) 
 
 #Seleccionamos los 3 primeros
-maximos_5 <- trabajadores_ord[]
+maximos_3 <- trabajadores_ord[]
 
 #Hacemos un plot
-barplot(maximos_5)
+barplot(maximos_3)
 ```
 
 `@solution`
@@ -531,10 +531,10 @@ llamadas_trabajador <- tapply(datos$Status, datos$Responsible.User, length)
 trabajadores_ord <- sort(llamadas_trabajador, decreasing = TRUE) 
 
 #Seleccionamos los 5 primeros
-maximos_5 <- trabajadores_ord[1:3]
+maximos_3 <- trabajadores_ord[1:3]
 
 #Hacemos un plot
-barplot(maximos_5)
+barplot(maximos_3)
 ```
 
 `@sct`
