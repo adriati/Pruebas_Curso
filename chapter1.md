@@ -543,7 +543,7 @@ barplot(maximos_3)
 ex() %>% check_object("num_trabajadores") %>% check_equal("num_trabajadores")
 ex() %>% check_object("llamadas_trabajador") %>% check_equal("llamadas_trabajador")
 ex() %>% check_object("trabajadores_ord") %>% check_equal("trabajadores_ord")
-ex() %>% check_object("maximos_5") %>% check_equal("maximos_5")
+ex() %>% check_object("maximos_3") %>% check_equal("maximos_3")
 success_msg("Bien!!")
 ```
 
