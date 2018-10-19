@@ -477,6 +477,73 @@ success_msg("Bien!!")
 
 ---
 
+## Uso de Tapply
+
+```yaml
+type: NormalExercise
+key: 1d1b6e0047
+xp: 100
+```
+
+#Vamos a usar la función tapply para ver que trabajadores han atendido a un mayor número de reclamaciones
+
+`@instructions`
+1. Calcular el número de trabajadores que hay en el dataset
+2. Utilizar tapply para dividir el dataser en grupos según su Responsable.User y calcular la longitud de cada grupo
+3. Ordenamos el vector resultante
+4. Cogemos los 5 resultados con mas llamadas y los dibujamos en un histograma
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
+```
+
+`@sample_code`
+```{r}
+#El nombre de los trabajadores es un factor, con levels sacamos los factores distintos de esa variable y con lenght los contamos
+num_trabajadores <- length(levels(datos$Responsible.User))
+
+#Utilizamos la funcion tapply para calcular el numero de reclamaciones que ha atendido cada trabajador
+llamadas_trabajador <- tapply(datos$Status, datos$Responsible.User, length)
+
+#Ordenamos la lista resultado
+trabajadores_ord <- sort(llamadas_trabajador, decreasing = TRUE) 
+
+#Seleccionamos los 5 primeros
+maximos_5 <- trabajadores_ord[1:5]
+
+#Hacemos un plot
+plot(maximos_5)
+```
+
+`@solution`
+```{r}
+#El nombre de los trabajadores es un factor, con levels sacamos los factores distintos de esa variable y con lenght los contamos
+num_trabajadores <- length(levels(datos$Responsible.User))
+
+#Utilizamos la funcion tapply para calcular el numero de reclamaciones que ha atendido cada trabajador
+llamadas_trabajador <- tapply(datos$Status, datos$Responsible.User, length)
+
+#Ordenamos la lista resultado
+trabajadores_ord <- sort(llamadas_trabajador, decreasing = TRUE) 
+
+#Seleccionamos los 5 primeros
+maximos_5 <- trabajadores_ord[1:5]
+
+#Hacemos un plot
+plot(maximos_5)
+```
+
+`@sct`
+```{r}
+
+```
+
+---
+
 ## Prueba de tipo de ejercicio Test con consola
 
 ```yaml
