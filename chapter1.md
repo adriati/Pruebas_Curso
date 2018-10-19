@@ -242,7 +242,7 @@ success_msg("Bien!!")
 
 ---
 
-## Matriz de confusión y función apply
+## Distribucion de estado de reclamacion segun prioridad
 
 ```yaml
 type: NormalExercise
