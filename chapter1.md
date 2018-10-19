@@ -46,7 +46,7 @@ primeros_10
 datos
 
 #Guarda los primeros 10 datos e imprimelos 
-primeros_10 <- 
+primeros_10 <- datos[1:10 ,]
 primeros_10
 ```
 
