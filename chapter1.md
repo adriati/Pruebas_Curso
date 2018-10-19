@@ -80,7 +80,7 @@ plot(datos$Severity)
 
 `@pre_exercise_code`
 ```{r}
-
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 ```
 
 `@sample_code`
@@ -146,7 +146,7 @@ nrow(datos_2017)
 
 `@pre_exercise_code`
 ```{r}
-
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 ```
 
 `@sample_code`
@@ -211,13 +211,13 @@ table(datos$Priority, datos$Severity)
 
 `@pre_exercise_code`
 ```{r}
-
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 ```
 
 `@sample_code`
 ```{r}
 #Los datos estan cargados aqui		
-datos
+#datos
 
 #Guardar tabla de confusion en mi_tabla e imprimirla
 mi_tabla <- table()
@@ -227,7 +227,7 @@ mi_tabla
 `@solution`
 ```{r}
 #Los datos estan cargados aqui		
-datos
+#datos
 
 #Guardar tabla de confusion en mi_tabla e imprimirla
 mi_tabla <- table(datos$Severity, datos$Priority)
@@ -272,7 +272,7 @@ Nota, también se podría expandiendo la matriz replicandola, a una de dimension
 
 `@pre_exercise_code`
 ```{r}
-
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 ```
 
 `@sample_code`
@@ -351,7 +351,7 @@ Para ello utilizaremos la funcion "is.numeric", lo malo es que no le podemos pas
 
 `@pre_exercise_code`
 ```{r}
-
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 ```
 
 `@sample_code`
@@ -422,6 +422,7 @@ xp: 100
 
 `@pre_exercise_code`
 ```{r}
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 #Los datos estan cargados aqui		
 #datos
 
@@ -498,7 +499,7 @@ xp: 100
 
 `@pre_exercise_code`
 ```{r}
-
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 ```
 
 `@sample_code`
@@ -569,7 +570,7 @@ nrow(datos[(datos$Response.time..s. == 0), ])
 
 `@pre_exercise_code`
 ```{r}
-
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 ```
 
 `@sct`
