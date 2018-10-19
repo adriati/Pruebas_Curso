@@ -231,7 +231,7 @@ success_msg("Bien!!")
 
 ---
 
-## Insert exercise title here
+## Matriz de confusión y función apply
 
 ```yaml
 type: NormalExercise
@@ -242,10 +242,19 @@ xp: 100
 #Otra matriz de confusion
 Esta vez vamos a ver si hay relación entre el estado de la reclamación y la Prioridad que se le ha dado
 
-Además, utilizar comando apply para calcular porcentaje de estatus de cada prioridad.
+Además, utilizar comando apply y bucle for para calcular porcentaje de estatus de cada prioridad.
 
 `@instructions`
 Volver a ejecutar el comando table, con las variables que nos interesan
+
+El bucle for tiene la misma estructura que en cualquier lenguaje de programacion
+Lo que vamos a hacer es usar la funcion apply para sumar por filas la matriz de confusion y obtener el número total de consultas por cada prioridad.
+apply(tabla_confusion, 1 , sum). El uno significa que la operacion que queremos hacer es por filas.
+Nota, también se podría expandiendo la matriz replicandola, a una de dimension 4x5
+
+Utilizamos el bucle para dividir y calcular el porcentaje.
+
+Imprimimos matriz resultante
 
 `@hint`
 
@@ -260,8 +269,19 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 #Los datos estan cargados aqui		
 datos
 
-#Imprimir tabla de confusion
-table()
+#Imprimir tabla de confusion y la guardamos
+tabla_confusion <- table()
+
+#Uso de la funcion apply
+vector_totales <- apply(tabla_confusion, 1 , sum)
+
+#Bucler for
+tabla_porcentajes <- matrix(1:20, ncol = 5)
+for (i in 1: nrow(tabla_confusion)) {
+  tabla_porcentajes[i,] <- tabla_confusion[i, ] / vector_totales[i]
+}
+
+#Imprimimos la tabla
 ```
 
 `@solution`
@@ -269,8 +289,20 @@ table()
 #Los datos estan cargados aqui		
 datos
 
-#Imprimir tabla de confusion
-table(datos$Priority, datos$Status)
+#Imprimir tabla de confusion y la guardamos
+tabla_confusion <- table(datos$Priority, datos$Status)
+
+#Uso de la funcion apply
+vector_totales <- apply(tabla_confusion, 1 , sum)
+
+#Bucler for
+tabla_porcentajes <- matrix(1:20, ncol = 5)
+for (i in 1: nrow(tabla_confusion)) {
+  tabla_porcentajes[i,] <- tabla_confusion[i, ] / vector_totales[i]
+}
+
+#Imprimimos la tabla
+tabla_porcentajes
 ```
 
 `@sct`
