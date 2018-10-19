@@ -428,8 +428,8 @@ xp: 50
 pie
 
 `@possible_answers`
-[pie(tabla_porcentajes[1,])]
-plot(table_porcentajes[1, ], type = "sector")
-sector(tabla_porcentajes[1,])
+1. [pie(tabla_porcentajes[1,])]
+2. plot(table_porcentajes[1, ], type = "sector")
+3. sector(tabla_porcentajes[1,])
 
 `@feedback`
