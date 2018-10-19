@@ -434,3 +434,4 @@ pie
 
 `@feedback`
 success_msg("Bien!!")
+fail_msg("Mal")
