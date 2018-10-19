@@ -104,6 +104,7 @@ plot(datos$Severity)
 `@sct`
 ```{r}
 ex() %>% check_code("plot(datos$Severity)")
+missing_msg("Algo has hecho mal")
 success_msg("Correcto.")
 ```
 
