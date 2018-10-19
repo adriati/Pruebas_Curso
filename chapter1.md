@@ -89,7 +89,7 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 #datos
 
 #Dibujar el gráfico
-mi_grafico <- 
+mi_grafico <- plot()
 mi_grafico
 ```
 
@@ -152,7 +152,7 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 `@sample_code`
 ```{r}
 #Los datos estan cargados aqui		
-datos 
+#datos 
 
 #Creamos el filtro
 filtro <- 
@@ -167,7 +167,7 @@ nrow(datos_2017)
 `@solution`
 ```{r}
 #Los datos estan cargados aqui		
-datos 
+#datos 
 
 #Creamos el filtro
 filtro <- datos$Year == 17 
@@ -181,6 +181,8 @@ nrow(datos_2017)
 
 `@sct`
 ```{r}
+ex() %>% check_object("filtro") %>% check_equal("filtro")
+ex() %>% check_object("datos_2017") %>% check_equal("datos_2017")
 success_msg("Bien!!")
 ```
 
@@ -217,21 +219,24 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 #Los datos estan cargados aqui		
 datos
 
-#Imprimir tabla de confusion
-table()
+#Guardar tabla de confusion en mi_tabla e imprimirla
+mi_tabla <- table()
+mi_tabla
 ```
 
 `@solution`
 ```{r}
 #Los datos estan cargados aqui		
-datos 
+datos
 
-#Imprimir tabla de confusion
-table(datos$Severity, datos$Priority)
+#Guardar tabla de confusion en mi_tabla e imprimirla
+mi_tabla <- table(datos$Severity, datos$Priority)
+mi_tabla
 ```
 
 `@sct`
 ```{r}
+ex() %>% check_object("mi_tabla") %>% check_equal("mi_tabla")
 success_msg("Bien!!")
 ```
 
@@ -313,6 +318,9 @@ tabla_porcentajes
 
 `@sct`
 ```{r}
+ex() %>% check_object("tabla_confusion") %>% check_equal("tabla_confusion")
+ex() %>% check_object("vectores_totales") %>% check_equal("vectores_totales")
+ex() %>% check_object("tabla_porcentajes") %>% check_equal("tabla_porcentajes")
 success_msg("Bien!!")
 ```
 
