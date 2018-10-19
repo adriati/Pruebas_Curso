@@ -307,5 +307,108 @@ tabla_porcentajes
 
 `@sct`
 ```{r}
+success_msg("Bien!!")
+```
 
+---
+
+## Análisis de Correlaciones
+
+```yaml
+type: NormalExercise
+key: 9102149933
+xp: 100
+```
+
+#Análisis de Correlaciones
+##Motivación
+Vamos a comprobar si las variables numéricas tienen una dependencia lineal mediante el calculo de sus correlaciones
+
+`@instructions`
+Lo primero es crear un dataset solo con variables numéricas, para ello aplicaremos un filtro a las columnas.
+Para ello utilizaremos la funcion "is.numeric", lo malo es que no le podemos pasar una fila entera, porque devuelve FALSE (es un vector, no un número) y hay que recorrer el vector con un bucle.
+Una vez lo tengamos, utilizamos el comando cor(dataset_numerico), para obtener correlaciones de variables dos a dos
+Por ultimo, se sacarán unas pequeñas conclusiones.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
+```
+
+`@sample_code`
+```{r}
+#Los datos, como siempre, estan en la variable "datos"
+
+#Creamos un filtro para seleccionar las variables que nos interesan
+filtro_columnas <- c(1:ncol(datos))
+for (i in 1 : ncol(datos)){
+  filtro_columnas[i] <- is.numeric(datos[3, i]) 
+}
+
+#Aplicamos el filtro a el dataset
+datos_numericos <- datos[, filtro_columnas]
+
+#Ejecutamos el análisis de correlaciones
+cor(datos_numericos)
+
+#Se puede ver que la mayoria de las variables no guardan ninguna dependencia lineal entre ellas. Solo la del año con la del número del ticket (no significatica, porque el numero de asignacion del ticket es incremental,)
+```
+
+`@solution`
+```{r}
+#Los datos, como siempre, estan en la variable "datos"
+
+#Creamos un filtro para seleccionar las variables que nos interesan
+filtro_columnas <- c(1:ncol(datos))
+for (i in 1 : ncol(datos)){
+  filtro_columnas[i] <- is.numeric(datos[3, i]) 
+}
+
+#Aplicamos el filtro a el dataset
+datos_numericos <- datos[, filtro_columnas]
+
+#Ejecutamos el análisis de correlaciones
+cor(datos_numericos)
+
+#Se puede ver que la mayoria de las variables no guardan ninguna dependencia lineal entre ellas. Solo la del año con la del número del ticket (no significatica, porque el numero de asignacion del ticket es incremental,)
+```
+
+`@sct`
+```{r}
+success_msg("Bien!!")
+```
+
+---
+
+## Prueba de tipo de ejercicio Test con consola
+
+```yaml
+type: MultipleChoiceExercise
+key: b63a9931b6
+xp: 50
+```
+
+#Calcular el numero de respuestas inmediatas (Response.time.s = 0)
+##Los datos, como siempre, estan en la variable "datos"
+
+`@possible_answers`
+1. 2498
+2. [3043]
+3. 4578
+4. 1439
+
+`@hint`
+nrow(datos[(datos$Response.time..s. == 0), ])
+
+`@pre_exercise_code`
+```{r}
+datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
+```
+
+`@sct`
+```{r}
+success_msg("Bien!!")
 ```
