@@ -319,7 +319,7 @@ tabla_porcentajes
 `@sct`
 ```{r}
 ex() %>% check_object("tabla_confusion") %>% check_equal("tabla_confusion")
-ex() %>% check_object("vectores_totales") %>% check_equal("vectores_totales")
+ex() %>% check_object("vector_totales") %>% check_equal("vector_totales")
 ex() %>% check_object("tabla_porcentajes") %>% check_equal("tabla_porcentajes")
 success_msg("Bien!!")
 ```
