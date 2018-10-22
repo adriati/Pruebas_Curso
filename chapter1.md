@@ -343,7 +343,7 @@ Para ello utilizaremos la funcion "is.numeric", lo malo es que no le podemos pas
 3. Por ultimo, se sacarán unas pequeñas conclusiones.
 
 `@hint`
-
+1. filtro_columnas[i] <- is.numeric(datos[3, i])
 
 `@pre_exercise_code`
 ```{r}
@@ -354,14 +354,15 @@ datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/380
 ```{r}
 #Los datos, como siempre, estan en la variable "datos"
 
-#Creamos un filtro para seleccionar las variables que nos interesan
+#Creamos un filtro para seleccionar las variables que nos interesan, utilizar la orden is.numeric, que devuelve TRUE si es numerico y FALSE si no lo es,
+#Para cada columna (bucle), en una fila arbitraria. Ejemplo (3)
 filtro_columnas <- c(1:ncol(datos))
 for (i in 1 : ncol(datos)){
-  filtro_columnas[i] <- is.numeric(datos[3, i]) 
+  
 }
 
 #Aplicamos el filtro a el dataset
-datos_numericos <- datos[, ]
+datos_numericos <- datos[, filtro_columnas]
 
 #Ejecutamos el análisis de correlaciones, guardamos los resultados y los imprimimos
 correlaciones <- cor(datos_numericos)
@@ -377,7 +378,7 @@ correlaciones
 #Creamos un filtro para seleccionar las variables que nos interesan
 filtro_columnas <- c(1:ncol(datos))
 for (i in 1 : ncol(datos)){
-  filtro_columnas[i] <- is.numeric(datos[3, i]) 
+  filtro_columnas[i] <- 
 }
 
 #Aplicamos el filtro a el dataset
@@ -392,7 +393,7 @@ correlaciones
 
 `@sct`
 ```{r}
-ex() %>% check_object("datos_numericos") %>% check_equal("datos_numericos")
+ex() %>% check_object("filtro_columnas") %>% check_equal("filtro_columnas")
 success_msg("Bien!!")
 ```
 
