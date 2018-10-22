@@ -70,7 +70,6 @@ xp: 100
 #¿Como están distribuidas las reclamaciones según su severidad?
 Dibujar un histograma del nº de reclamaciones según su serveridad, usando el comando plot
 
-
 `@instructions`
 Podemos construir un histograma con la orden y argumento, el nombre de la column a que queremos utilizar
 plot(datos$Severity)
@@ -197,9 +196,7 @@ xp: 100
 ```
 
 #Crear tablas de confusión en R
-##Motivación
 Muchas veces, cuando queremos comparar dos variables que son factores, es decir, son variables discretas finitas, es muy útil el uso de tablas de confusión, además, son muy fáciles de usar.
-##Ejemplo de uso
 Queremos ver si para nuestros datos, hay una relación entre la prioridad que se le da a cada reclamacion, con la severidad de la misma
 
 `@instructions`
@@ -335,7 +332,6 @@ xp: 100
 ```
 
 #Análisis de Correlaciones
-##Motivación
 Vamos a comprobar si las variables numéricas tienen una dependencia lineal mediante el calculo de sus correlaciones
 
 `@instructions`
