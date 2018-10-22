@@ -364,7 +364,7 @@ for (i in 1 : ncol(datos)){
 datos_numericos <- datos[, ]
 
 #Ejecutamos el análisis de correlaciones, guardamos los resultados y los imprimimos
-correlaciones <- cor()
+correlaciones <- cor(datos_numericos)
 correlaciones
 
 #Se puede ver que la mayoria de las variables no guardan ninguna dependencia lineal entre ellas. Solo la del año con la del número del ticket (no significatica, porque el numero de asignacion del ticket es incremental,)
@@ -393,7 +393,6 @@ correlaciones
 `@sct`
 ```{r}
 ex() %>% check_object("datos_numericos") %>% check_equal("datos_numericos")
-ex() %>% check_object("correlaciones") %>% check_equal("correlaciones")
 success_msg("Bien!!")
 ```
 
@@ -441,8 +440,9 @@ for (i in 1: nrow(tabla_confusion)) {
 ```{r}
 #Los datos que necesitamos son los calculados en el ejercicio 5 y estan en "tabla_porcentajes"
 
-#Creamos el layout, lo guardamos en milayout y lo ejecutamos
-mi_layout <- layout()
+#Creamos la matriz que divide la pantalla, y la aplicamos al layout.
+matriz_division <- matrix(1:4, ncol = 2, byrow= TRUE)
+mi_layout <- layout(matriz_division)
 mi_layout
 
 #Bucle for para dibujar gráficos, cada uno de un color
@@ -457,7 +457,8 @@ for (i in 1:nrow(tabla_porcentajes)) {
 #Los datos que necesitamos son los calculados en el ejercicio 5 y estan en "tabla_porcentajes"
 
 #Creamos el layout, lo guardamos en milayout y lo ejecutamos
-mi_layout <- layout(matrix(1:4, ncol = 2, byrow= TRUE))
+matriz_division <- matrix(1:4, ncol = 2, byrow= TRUE)
+mi_layout <- layout(matriz_division)
 mi_layout
 
 #Bucle for para dibujar gráficos, cada uno de un color
@@ -468,7 +469,7 @@ for (i in 1:nrow(tabla_porcentajes)) {
 
 `@sct`
 ```{r}
-ex() %>% check_object("mi_layout") %>% check_equal("mi_layout")
+ex() %>% check_object("matriz_division") %>% check_equal("matriz_division")
 success_msg("Bien!!")
 ```
 
