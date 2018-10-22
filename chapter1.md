@@ -420,10 +420,10 @@ xp: 100
 ```{r}
 datos <- read.csv(file = "http://assets.datacamp.com/production/repositories/3807/datasets/5f5937e865b0e18f1ce3cc53f52372ece2b8e9fc/datos_sm2m.csv", header = TRUE)
 #Los datos estan cargados aqui		
-#datos
+datos
 
 #Imprimir tabla de confusion y la guardamos
-tabla_confusion <- table()
+tabla_confusion <- table(datos$Priority, datos$Status)
 
 #Uso de la funcion apply
 vector_totales <- apply(tabla_confusion, 1 , sum)
@@ -435,6 +435,7 @@ for (i in 1: nrow(tabla_confusion)) {
 }
 
 #Imprimimos la tabla
+tabla_porcentajes
 ```
 
 `@sample_code`
